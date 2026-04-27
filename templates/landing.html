@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudScan AI | Real-Time Financial Transaction Security</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Navigation -->
+    <header class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-shield-alt"></i></span>
+                FRAUDSCAN.AI
+            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#methodology">Methodology</a>
+                <a href="/login" class="btn-outline">Sign In</a>
+                <a href="/register" class="btn btn-primary" style="padding: 10px 25px;">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">Next-Gen Security v2.4</div>
+                <h1>Real-Time <span class="text-gradient">Fraud Detection</span> for Modern Finance</h1>
+                <p class="hero-subtitle">Utilizing advanced supervised machine learning algorithms to monitor, analyze, and secure online financial transactions with millisecond precision.</p>
+                <div class="hero-actions">
+                    <a href="/register" class="btn btn-primary">Start Protecting Now <i class="fas fa-chevron-right" style="margin-left: 10px;"></i></a>
+                    <a href="#features" class="btn-link">Learn how it works <i class="fas fa-play" style="margin-left: 8px; font-size: 0.8rem;"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">99.8%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">< 50ms</span>
+                        <span class="stat-label">Latency</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-label">Monitoring</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="glass-image-container">
+                    <img src="{{ url_for('static', filename='images/hero_main.jpeg') }}" alt="Fraud Detection Dashboard" class="hero-img">
+                </div>
+                <!-- Floating Elements -->
+                <div class="floating-widget widget-1">
+                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                    <span>Verified Source</span>
+                </div>
+                <div class="floating-widget widget-2">
+                    <i class="fas fa-exclamation-triangle" style="color: #ef4444;"></i>
+                    <span>Pattern Alert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">Production-Grade Intelligence</h2>
+            <p class="section-subtitle">Our multi-layered approach ensures every transaction is scrutinized through thousands of data points.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-img-box">
+                    <img src="{{ url_for('static', filename='images/feature_monitoring.jpeg') }}" alt="Real-time Monitoring">
+                </div>
+                <div class="feature-content">
+                    <h3>Real-Time Behavioral Monitoring</h3>
+                    <p>Continuously track user behavior patterns to identify anomalies before they become fraudulent transactions.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-img-box">
+                    <img src="{{ url_for('static', filename='images/feature_analysis.jpeg') }}" alt="Advanced Analytics">
+                </div>
+                <div class="feature-content">
+                    <h3>Deep Pattern Analysis</h3>
+                    <p>Identify complex fraud vectors across multiple channels using our proprietary supervised learning models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology-section">
+        <div class="methodology-container">
+            <div class="methodology-text">
+                <h2 class="section-title">The Methodology</h2>
+                <div class="methodology-steps">
+                    <div class="m-step">
+                        <div class="m-step-icon">01</div>
+                        <div class="m-step-content">
+                            <h4>Feature Engineering</h4>
+                            <p>Extraction of 18 high-fidelity transaction features including behavioral forensics and device integrity.</p>
+                        </div>
+                    </div>
+                    <div class="m-step">
+                        <div class="m-step-icon">02</div>
+                        <div class="m-step-content">
+                            <h4>Supervised Learning</h4>
+                            <p>Training on massive datasets to recognize signatures of legitimate vs. fraudulent activity.</p>
+                        </div>
+                    </div>
+                    <div class="m-step">
+                        <div class="m-step-icon">03</div>
+                        <div class="m-step-content">
+                            <h4>Real-Time Inference</h4>
+                            <p>Deploying models at the edge for sub-50ms decisioning on every financial pulse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Developed for Real-Time Fraud Detection | Supervised Machine Learning Research</p>
+        </div>
+    </footer>
+
+</body>
+</html>
