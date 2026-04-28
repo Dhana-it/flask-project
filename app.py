@@ -6,12 +6,7 @@ import sqlite3
 app = Flask(__name__)
 app.secret_key = "fraud_secret"
 
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "fraud_detection_model.pkl")
-
-model = joblib.load(model_path)
+model = joblib.load("fraud_detection_model.pkl")
 
 
 # Home Landing Page
@@ -133,5 +128,5 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
     
-
+print("Flask app started successfully")
 
