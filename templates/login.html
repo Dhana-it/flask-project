@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background: white;">
+
+    <div class="auth-wrapper">
+        <!-- Left Side: Form -->
+        <div class="auth-form-side" style="animation: slideInLeft 0.6s ease-out;">
+            <div style="width: 100%; max-width: 400px; position: absolute; top: 40px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px;">
+                <a href="/" style="color: var(--text-main); text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Not a member? <a href="/register" style="color: #4f46e5; font-weight: 600; text-decoration: none;">Sign up</a></p>
+            </div>
+
+            <div class="auth-form-container">
+                <h2>Sign In</h2>
+                <p class="subtitle" style="margin-bottom: 40px; text-align: left;">Welcome back! Access your secure dashboard.</p>
+
+                <form method="POST">
+                    <div class="input-group">
+                        <label style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; display: block; color: var(--text-main);">Username or Email</label>
+                        <i class="fas fa-user-circle" style="position: absolute; left: 15px; top: 45px; color: #cbd5e1;"></i>
+                        <input type="text" name="identifier" placeholder="Enter username or email" required style="background: white; border-color: #e2e8f0; padding-left: 45px;">
+                    </div>
+                    <div class="input-group">
+                        <label style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; display: block; color: var(--text-main);">Password</label>
+                        <i class="fas fa-lock" style="position: absolute; left: 15px; top: 45px; color: #cbd5e1;"></i>
+                        <input type="password" name="password" placeholder="••••••••" required style="background: white; border-color: #e2e8f0; padding-left: 45px;">
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0 20px;">
+                        <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                            <input type="checkbox" style="width: 16px; margin: 0;"> Remember me
+                        </label>
+                        <a href="#" style="font-size: 0.85rem; color: #4f46e5; text-decoration: none; font-weight: 600;">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; height: 52px; font-size: 1rem; border: none;">
+                        Sign In <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                    </button>
+                    
+                    <div style="display: flex; align-items: center; margin: 30px 0; gap: 15px;">
+                        <hr style="flex: 1; border: 0; border-top: 1px solid #e2e8f0;">
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Or continue with</span>
+                        <hr style="flex: 1; border: 0; border-top: 1px solid #e2e8f0;">
+                    </div>
+
+                    <div class="social-login">
+                        <div class="social-btn"><i class="fab fa-google"></i></div>
+                        <div class="social-btn"><i class="fab fa-facebook-f"></i></div>
+                        <div class="social-btn"><i class="fab fa-apple"></i></div>
+                    </div>
+                </form>
+            </div>
+            
+            <div style="position: absolute; bottom: 40px; font-size: 0.85rem; color: var(--text-muted);">
+                &copy; 2026 FraudScan.ai • Secure Financial Intelligence
+            </div>
+        </div>
+
+        <!-- Right Side: Visuals -->
+        <div class="auth-visual-side">
+            <div class="mini-card mini-card-1">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="font-size: 0.8rem; font-weight: 600; color: #64748b;">Live Monitoring</span>
+                    <div style="width: 8px; height: 8px; background: #ef4444; border-radius: 50%; box-shadow: 0 0 10px #ef4444;"></div>
+                </div>
+                <div style="font-size: 1.5rem; font-weight: 800; color: #1e293b; margin-bottom: 10px;">$176,18</div>
+                <div style="height: 40px; background: rgba(79, 70, 229, 0.1); width: 100%; border-radius: 8px; overflow: hidden;">
+                     <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width: 100%; height: 100%; fill: none; stroke: #4f46e5; stroke-width: 2;">
+                        <path d="M0 35 L 20 15 L 40 30 L 60 10 L 80 25 L 100 5" />
+                     </svg>
+                </div>
+            </div>
+
+            <div class="mini-card mini-card-2" style="width: 300px;">
+                <div style="background: rgba(79, 70, 229, 0.1); width: 44px; height: 44px; border-radius: 12px; display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-shield-check" style="color: #4f46e5; font-size: 1.2rem;"></i>
+                </div>
+                <div style="font-family: 'Outfit'; font-weight: 700; font-size: 1.1rem; color: #1e293b; margin-bottom: 8px;">End-to-end encryption</div>
+                <p style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">Your transaction keys are encrypted locally for the highest level of financial sovereignty.</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+
+</body>
+</html>
